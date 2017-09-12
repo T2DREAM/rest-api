@@ -1,4 +1,4 @@
-#T2DREAM Application Programming Interface (API)
+# T2DREAM Application Programming Interface (API)
 
 The T2DREAM API provides programmatic access to T2DREAM portal and drives data query and submission functionality. The T2DREAM API uses JSON and standard HTTP verbs for communication with the portal.
 
