@@ -6,6 +6,9 @@ There are several third-party tools that can be used with T2DREAM REST API, we h
 
 | Tool          | Description          |
 | ------------- |:-------------:| 
-| col 3 is      | right-aligned |
-| col 2 is      | centered      |   
-| zebra stripes | are neat      |
+| JSON Formatter | Web browser plugin for Safari |
+| JSONVIEW | Web browser plugin for Chrome and Firefox |   
+| Restlet | Web browser plugin for Chrome |
+| Curl | Command line tool |
+|Postman REST Client | Tool for API development |
+
