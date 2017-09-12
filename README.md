@@ -24,4 +24,4 @@ Example: To request metadata for experiment TSTSR112545
 
  http://www.t2dream-demo.org/experiments/TSTSR112545/?format=json
 
-![pretty-printer] http://www.t2dream-demo.org/experiments/TSTSR112545/?format=json
+![pretty-printer](http://www.t2dream-demo.org/experiments/TSTSR112545/?format=json)
