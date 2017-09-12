@@ -20,7 +20,8 @@ Every object (e.g., experiment, annotation, biosamples, antibodies, data file et
 ### Web browser JSON pretty-printer plugin
 JSON pretty-printer plugin for web browser can be used to view page as JSON.  In order to view page as JSON add “?format=json” to the URL
 
-Example: To request metadata for experiment TSTSR112545: 
+Example: To request metadata for experiment TSTSR112545
 
  http://www.t2dream-demo.org/experiments/TSTSR112545/?format=json
 
+![pretty-printer] http://www.t2dream-demo.org/experiments/TSTSR112545/?format=json
