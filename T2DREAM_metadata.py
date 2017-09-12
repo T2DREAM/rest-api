@@ -7,7 +7,7 @@ import json
 
 
 EPILOG = '''
-%(prog)s GET the results of a search from an ENCODE server metadata in JSON or TSV format
+%(prog)s GET the results of a search from an T2DREAM server metadata in JSON or TSV format
 
 Basic Useage:
 
