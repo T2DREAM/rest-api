@@ -25,3 +25,22 @@ Example: To request metadata for experiment TSTSR112545
  http://www.t2dream-demo.org/experiments/TSTSR112545/?format=json
 
 ![pretty-printer](https://github.com/T2DREAM/rest-api/blob/master/images/JSONVIEW%20o:p.png)
+
+Curl
+
+Prerequisite:  json.tool provides command line interface to validate and pretty-print JSON 
+
+Installation for OS X and Linux:
+
+$ pip install jsontool
+
+The following is an example of a request to annotation endpoint using annotation id, that retrieves annotation metadata: 
+
+$ curl –L -H "Accept: application/json" http://www.t2dream-demo.org/annotations/TSTSR027410/ | python -m json.tool > 13-state_model_liver.json
+
+
+
+The following is an example of a request to match objects that match RRBS: 
+
+curl -L -H "Accept: application/json" http://www.t2dream-demo.org/search/?searchTerm=RRBS | python -m json.tool > RRBS
+
