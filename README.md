@@ -26,7 +26,7 @@ Example: To request metadata for experiment TSTSR112545
 
 ![pretty-printer](https://github.com/T2DREAM/rest-api/blob/master/images/JSONVIEW%20o:p.png)
 
-Curl
+### Curl
 
 Prerequisite:  json.tool provides command line interface to validate and pretty-print JSON 
 
