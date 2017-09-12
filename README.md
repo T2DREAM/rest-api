@@ -36,7 +36,7 @@ Installation for OS X and Linux:
 $ pip install jsontool
 ```
 
-The following is an example of a request to annotation endpoint using annotation id, that retrieves annotation metadata: 
+Example of a request to annotation endpoint using annotation id, that retrieves annotation metadata: 
 
 ```
 $ curl –L -H "Accept: application/json" http://www.t2dream-demo.org/annotations/TSTSR027410/ | python -m json.tool > 13-state_model_liver.json
@@ -44,8 +44,15 @@ $ curl –L -H "Accept: application/json" http://www.t2dream-demo.org/annotation
 
 ![annotation_metadata](https://github.com/T2DREAM/rest-api/blob/master/images/annotation_metadata.png)
 
-The following is an example of a request to match objects that match RRBS: 
+ Example of a request to match objects that match RRBS: 
 
 ```
 curl -L -H "Accept: application/json" http://www.t2dream-demo.org/search/?searchTerm=RRBS | python -m json.tool > RRBS
 ```
+
+Retrieval of all ATAC-seq experiments in TSV format:
+
+```
+curl -L "Accept: application/json" 'www.t2dream-demo.org/report.tsv?type=Experiment&searchTerm=ATAC-seq'
+```
+
