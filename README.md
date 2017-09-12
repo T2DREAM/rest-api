@@ -6,9 +6,9 @@ There are several third-party tools that can be used with T2DREAM REST API, we h
 
 | Tool          | Description          |
 | ------------- |:-------------:| 
-| JSON Formatter | Web browser plugin for Safari |
-| JSONVIEW | Web browser plugin for Chrome and Firefox |   
-| Restlet | Web browser plugin for Chrome |
-| Curl | Command line tool |
-|Postman REST Client | Tool for API development |
+| [JSON Formatter] (https://jsonformatter.org/) | Web browser plugin for Safari |
+| [JSONVIEW] (https://addons.mozilla.org/en-us/firefox/addon/jsonview/) | Web browser plugin for Chrome and Firefox |   
+| [Restlet] (https://restlet.com/) | Web browser plugin for Chrome |
+| [Curl] (https://curl.haxx.se/) | Command line tool |
+|[Postman REST Client] (https://www.getpostman.com/) | Tool for API development |
 
