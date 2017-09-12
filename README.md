@@ -12,3 +12,15 @@ There are several third-party tools that can be used with T2DREAM REST API, we h
 | [Curl](https://curl.haxx.se/) | Command line tool |
 |[Postman REST Client](https://www.getpostman.com/) | Tool for API development |
 
+## T2DREAM Accession Ids
+Every object (e.g., experiment, annotation, biosamples, antibodies, data file etc.) have unique accession TSTXXXXXXXX ids.  API request – response can be made to retrieve specific individual, group or mashup of these objects.
+
+## Search and Retrieval Examples
+
+### Web browser JSON pretty-printer plugin
+JSON pretty-printer plugin for web browser can be used to view page as JSON.  In order to view page as JSON add “?format=json” to the URL
+
+Example: To request metadata for experiment TSTSR112545: 
+
+ http://www.t2dream-demo.org/experiments/TSTSR112545/?format=json
+
