@@ -13,7 +13,7 @@ Basic Useage:
 
     %(prog)s --type experiment --accession TSTSR112545
     
-    A single accession and metadata - experiment, file, annotation
+    A accession and metadata type - experiment, file, annotation
 '''
 
 def main():
@@ -21,7 +21,7 @@ def main():
         description=__doc__, epilog=EPILOG,
         formatter_class=argparse.RawDescriptionHelpFormatter,
         )
-    parser.add_argument('--accession', help="File containing single column of accessions " + "or a single accession")
+    parser.add_argument('--accession', help="accession id")
     parser.add_argument('--type', help="Data type: experiment, annotation or file")
     args = parser.parse_args()
     accession= args.accession
