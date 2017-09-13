@@ -56,7 +56,8 @@ Retrieval of all ATAC-seq experiments in TSV format:
 curl -L "Accept: application/json" 'www.t2dream-demo.org/report.tsv?type=Experiment&searchTerm=ATAC-seq'
 ```
 
-Programmatic access to metadata 
+## Programmatic access to metadata 
+
 T2DREAM_metadata_access.py script abstracts the GET request for metadata retrieval. It takes metadata type and accession id and returns metadata in JSON format.
 
 The following metadata endpoints are available from T2DREAM API to access metadata programmatically 
