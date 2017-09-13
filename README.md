@@ -80,3 +80,5 @@ Example: Download antibody metadata
 python2 T2DREAM_metadata_access.py --accession TSTAB000404 --type antibodies
 ```
 Truncated output
+
+![metadata_output](https://github.com/T2DREAM/rest-api/blob/master/images/metadata_access_example_output.png)
