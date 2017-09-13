@@ -1,50 +1,35 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python2
 
 import argparse
 import os
 import sys
 import json
-
+import requests
 
 EPILOG = '''
 %(prog)s GET the results of a search from an T2DREAM server metadata in JSON or TSV format
 
 Basic Useage:
 
-    %(prog)s --infile file.txt
-    %(prog)s --infile TSTSR112545
+    %(prog)s --type experiment --accession TSTSR112545
     
-    A single column file listing the  identifiers of the objects desired
-    Search accession
-
-    The output file format either JSON or TSV
-    This can be changed with '--format'
-
+    A single accession and metadata - experiment, file, annotation
 '''
 
-def getArgs():
+def main():
     parser = argparse.ArgumentParser(
         description=__doc__, epilog=EPILOG,
         formatter_class=argparse.RawDescriptionHelpFormatter,
         )
-    parser.add_argument('--infile',
-                        help="File containing single column of accessions " +
-                        "or a single accession")
-    parser.add_argument('--outfile',
-                        help="Output file name", default='report.txt')
-    parser.add_argument('--format',
-                        help="Output format can be either JSON or TSV.  Default is JSON",
-                         default='JSON')
+    parser.add_argument('--accession', help="File containing single column of accessions " + "or a single accession")
+    parser.add_argument('--type', help="Data type: experiment, annotation or file")
     args = parser.parse_args()
-
-class get_metadata():
-        def __init__(self, args):
-            self.infile = args.infile
-            self.outfile = args.outfile
-            self.format = args.format
-
-def main():
-    args = getArgs()
-
+    accession= args.accession
+    type = args.type
+    HEADERS = {'accept': 'application/json'}
+    URL = 'http://www.t2dream-demo.org/'
+    response = requests.get(URL + type  + '/' + accession, headers=HEADERS)
+    response_json_dict = response.json()
+    print json.dumps(response_json_dict, indent=4, separators=(',', ': '))
 if __name__ == "__main__":
     main()
