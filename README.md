@@ -56,3 +56,30 @@ Retrieval of all ATAC-seq experiments in TSV format:
 curl -L "Accept: application/json" 'www.t2dream-demo.org/report.tsv?type=Experiment&searchTerm=ATAC-seq'
 ```
 
+## Programmatic access to metadata 
+
+T2DREAM_metadata_access.py script abstracts the GET request for metadata retrieval. It takes metadata type and accession id and returns metadata in JSON format.
+
+The following metadata endpoints are available from T2DREAM API to access metadata programmatically 
+
+|Metadata Endpoints (type) | Description|
+|------------- |:-------------:| 
+| experiment | Includes assay metadata, replicate information and data files |
+| annotation | Metadata for an annotation set |
+| files | Metadata for a data file (e.g., fastq, bigwig, bed, bam, bigBed,  tagAlign, sra) |
+| biosamples |  Metadata for biosamples |
+| antibodies | Metadata for antibodies |
+| target | metadata for target gene |
+
+The REST-API codebase is available on T2DREAM REST API GitHub Repository 
+
+Prerequisite: python modules - argparse , json, requests 
+
+Example: Download antibody metadata
+
+```
+python2 T2DREAM_metadata_access.py --accession TSTAB000404 --type antibodies
+```
+Truncated output
+
+![metadata_output](https://github.com/T2DREAM/rest-api/blob/master/images/metadata_access_example_output.png)
