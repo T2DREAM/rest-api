@@ -7,17 +7,17 @@ import json
 import requests
 
 EPILOG = '''
-%(prog)s GET the results of region search from T2DREAM server in JSON format
+%(prog)s GET the results of annotation region search from T2DREAM server in JSON format
 
 Basic Useage:
 
     %(prog)s --genome GRCh37 --region rs7903146
     
-    rs id and genome version - region, genome version
+    rs id or chromosome location of variant (chr10:114758349-114758349) and genome version - region, genome version
 '''
 def region_search(genome, region):
     HEADERS = {'accept': 'application/json'}
-    URL = 'http://www.t2dream-demo.org/region-search/?region='
+    URL = 'https://t2depigenome-test.org/peak_metadata/region='
     response = requests.get(URL + region  + '&genome=' + genome, headers=HEADERS)
     response_json_dict = response.json()
     region_search_response = json.dumps(response_json_dict, indent=4, separators=(',', ': '))
