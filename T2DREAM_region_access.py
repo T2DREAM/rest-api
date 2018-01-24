@@ -18,7 +18,7 @@ Basic Useage:
 def region_search(genome, region):
     HEADERS = {'accept': 'application/json'}
     URL = 'https://t2depigenome-test.org/peak_metadata/region='
-    response = requests.get(URL + region  + '&genome=' + genome, headers=HEADERS)
+    response = requests.get(URL + region  + '&genome=' + genome + '/peak_metadata.json', headers=HEADERS)
     response_json_dict = response.json()
     region_search_response = json.dumps(response_json_dict, indent=4, separators=(',', ': '))
     return region_search_response
@@ -27,7 +27,7 @@ def main():
         description=__doc__, epilog=EPILOG,
         formatter_class=argparse.RawDescriptionHelpFormatter,
         )
-    parser.add_argument('--region', help="rs id")
+    parser.add_argument('--region', help="rs id or chromosome location")
     parser.add_argument('--genome', help="Genome version: GRCh37 or GRCh38")
     args = parser.parse_args()
     region = args.region
